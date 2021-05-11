@@ -1,4 +1,19 @@
  body {
-     background: white url("../images/vineyard.jpg");
+     background: white url("../images/tailorShop.jpg");
      background-size: cover;
+}
+h1.logo {
+    text-align: center;
+    color: lightgray;
+    font-family: Dancing Script;
+    font-size: xxx-large;
+}
+head {
+    background: white url("../images/dressCode.jp");
+}
+img {
+    margin-right: auto;
+    margin-left: auto;
+    width: 25%;
+    display: block;
 }
