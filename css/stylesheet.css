@@ -1,5 +1,5 @@
- body {
-     background: white url("../images/tailorShop.jpg");
+body#myPage {
+     background: white url("../images/crochet.jpg");
      background-size: cover;
 }
 h1.logo {
@@ -8,12 +8,30 @@ h1.logo {
     font-family: Dancing Script;
     font-size: xxx-large;
 }
-head {
-    background: white url("../images/dressCode.jp");
-}
 img {
     margin-right: auto;
     margin-left: auto;
-    width: 25%;
+    width: 15%;
     display: block;
+}
+ button.signUp {
+    border: hidden;
+    margin-top: 5px;
+    background: border-box;
+    min-inline-size: -webkit-fill-available;
+    
+}
+button.signUp :hover  {
+    color:red;
+    transition:0.50s;
+}
+button.signIn :hover  {
+    color:red;
+    transition:0.50s;
+}
+button.signIn {
+    border: hidden;
+    background: border-box;
+    margin-bottom: 10px;
+    min-inline-size: -webkit-fill-available;
 }
