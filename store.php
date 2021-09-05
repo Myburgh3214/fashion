@@ -29,7 +29,6 @@
   <form action="signUp.php" method="POST">
     <a href="signUp.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign Up</a>
     <a href="store.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Store Page</a>
-
   </form>
     </div>
   </div>
