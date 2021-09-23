@@ -1,6 +1,9 @@
+<?php
+  include ("connect.php")
+?>
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Online Store</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -26,9 +29,12 @@
  <div class="w3-bar w3-theme-d2 w3-left-align">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   <a href="index.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Logo</a>
-  <form action="signUp.php" method="POST">
+  <a href="store.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Store Page</a>
     <a href="signUp.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign Up</a>
-    <a href="store.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Store Page</a>
+    <a href="about.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+    <a href="contact.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+
+
   </form>
     </div>
   </div>
@@ -45,45 +51,77 @@
   </div>
 </div>
 
-<!-- Registration Form -->
+<!-- Team Container -->
 <div class="w3-container w3-padding-64 w3-center" id="team">
    <img src="images/koekieblom.jpg">
-   <h1>Registration Form: </h1>
-  <form action="signUp.php" method="$_POST">
-    <label><h2>Username:</h2></label>
-    <input type="text" name="userName">
-
-    <label><h2>Password:</h2></label>
-    <input type="text" name="passWord">
-</form>
-</div>
-</div>
+  
 </div>
 
-<!-- Container -->
-<div class="w3-container" style="position:relative">
-  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
-  style="position:absolute;top:-28px;right:24px">+</a>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+<div class="w3-display-middle" name="hidden">
+  <h2><b>Login Form:</b></h2>
+  
+<form action="index.php" method="POST">
+
 </div>
 
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
-  <h4>Follow Us</h4>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
-  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-
-  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
-    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
-    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
-    <i class="fa fa-chevron-circle-up"></i></span></a>
+  <div class="container">
+  <div class="userName">
+    <label for="userName"><h4><b>Username:</b></h4></label>
+    <input type="text" placeholder="Enter Email" name="email">
   </div>
-</footer>
-
-
+  <div class="passWord">
+    <label for="passWord"><h4><b>Password:</b></h4></label>
+    <input type="password" placeholder="Enter Password" name="psw">
+  </div>
+  <div>   
+    <button type="submit" name="login">Login</button>
+  </div>
+  </form>
+  <form action="forgot.php" method="POST">
+    <button type="submit">Forgot Password</button>
+  </form>
+  <form action="update.php" method="POST">
+    <button type="submit">Sign Up</button>
+  </form>
+  
+</div>
+</div>
 </body>
 </html>
+<?php
+if ( isset( $_POST['signUpbtn'] ) ) {
+ $_SESSION['signUpbtn'] = $_POST['signUpbtn'];
+}
+?>
+<?php
+  if ( isset( $_POST['login'] ) ) { 
+
+
+
+    $email = $_POST["email"];
+    $loginPassword = $_POST["psw"];
+
+    $sqlTargets = "SELECT email FROM users WHERE email = '$email' AND password = '$loginPassword' ";
+    $result = $conn->query($sqlTargets);
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+          header("Location: signin.php");
+        }
+    } else {
+      echo "Invalid user or password";
+    }
+    $conn->close();
+    }
+  
+    session_start(); 
+    $_SESSION["email"] = "$email";
+    $_SESSION["psw"] = "$loginPassword";
+    echo $_SESSION["email"];
+    die()
+
+
+?>

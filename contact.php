@@ -58,14 +58,17 @@
   <form action="signUp.php" method="POST">
     <div>
     <label><h2>Email:</h2></label>
-    <input type="text" name="email">
+    <input type="text" name="name">
     </div>
     
     <div>
     <label><h2>Password:</h2></label>
-    <input type="text" name="passWord">
+    <input type="text" name="email">
     </div>
-
+    <div>
+    <label><h2>message:</h2></label>
+    <input type="text" name="message">
+    </div>
     <div>
     <br>
     <button type="submit" name="submitBtn">Confirm</button>
@@ -77,8 +80,7 @@
 
 <!-- Container -->
 <div class="w3-container" style="position:relative">
-  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
-  style="position:absolute;top:-28px;right:24px">+</a>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.144331123383!2d18.625727815157376!3d-31.793816181280032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c33d0a295b659c5%3A0xaab776170b0bce89!2sKlawer%20Wine%20Cellars%20(Pty)%20Ltd!5e0!3m2!1sen!2sza!4v1632388604629!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
 
 
@@ -97,22 +99,21 @@
     <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
+  
 </footer>
+
 </body>
 </html>
 <?php
+  $name = $_POST["name"];
   $email = $_POST["email"];
-  $passWord = $_POST["passWord"];
+  $message = $_POST["message"];
 
    if (isset($_POST["submitBtn"])){
-    if($passWord == "koekieblom1234"){
-      $sql = "INSERT INTO users (email, password, role) VALUES ('$email', '$passWord', 'admin')";
+      $sql = "INSERT INTO contact_form (name, email, message) VALUES ('$name', '$email', '$message')";
       $conn->query($sql); 
-    }
-    else{
-      $sql = "INSERT INTO users (email, password, role) VALUES ('$email', '$passWord', 'member')";
-      $conn->query($sql); 
-    }
+    
   }
 
 ?>
+https://goo.gl/maps/KVNvtK8uTPSQcrt47
