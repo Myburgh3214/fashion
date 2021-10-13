@@ -1,6 +1,3 @@
-<?php
-  include ("connect.php")
-?>
 <!DOCTYPE html>
 <html>
 <title>Online Store</title>
@@ -27,15 +24,21 @@
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
+   
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="index.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Logo</a>
+
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
   <a href="store.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Store Page</a>
     <a href="signUp.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign Up</a>
     <a href="about.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
     <a href="contact.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <a href="forgot.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Forgot Password</a>
+    <a href="profile.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
+    <a href="gallleryPage.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
+    <a href = "basket.php" style="font-size:24px" i class="fa fa-shopping-cart"></a>
 
 
-  </form>
+
     </div>
   </div>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
@@ -57,71 +60,73 @@
   
 </div>
 
-<body>
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
 
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-<div class="w3-display-middle" name="hidden">
-  <h2><b>Login Form:</b></h2>
-  
-<form action="index.php" method="POST">
-
+<div class="w3-quarter">
+  <h2>Our Work</h2>
+  <p>We make handmade crochet products, making sure we put as much care into our products as we possibly can.</p>
 </div>
 
-  <div class="container">
-  <div class="userName">
-    <label for="userName"><h4><b>Username:</b></h4></label>
-    <input type="text" placeholder="Enter Email" name="email">
-  </div>
-  <div class="passWord">
-    <label for="passWord"><h4><b>Password:</b></h4></label>
-    <input type="password" placeholder="Enter Password" name="psw">
-  </div>
-  <div>   
-    <button type="submit" name="login">Login</button>
-  </div>
-  </form>
-  <form action="forgot.php" method="POST">
-    <button type="submit">Forgot Password</button>
-  </form>
-  <form action="update.php" method="POST">
-    <button type="submit">Sign Up</button>
-  </form>
+<div class="w3-quarter">
+<div class="card">
+  <img src="images/mini-backpack.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Backpack</h1>
+  <p class="price">R120</p>
+  <p>Backpack is reusable and contains skincare products.</p>
+  <p><button>Add to Cart</button></p>
   
 </div>
+  </div>
+  <div><div class="w3-quarter">
+<div class="card">
+  <img src="images/greyBeanie.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Grey Beanie</h1>
+  <p class="price">R80</p>
+  <p>A high quality grey beanie. Made from 100% Acylic.</p>
+  <p><button>Add to Cart</button></p>
 </div>
+  </div>
+  <div class="w3-quarter">
+<div class="card">
+  <img src="images/sack.jpg" alt="sack" style="width:100%">
+  <h1>Sack</h1>
+  <p class="price">R120</p>
+  <p>Contains skincare products, and the sack is reusable.</p>
+  <p><button>Add to Cart</button></p>
+</div>
+  </div>
+  </div>
+</div>
+  </div>
+</div></div>
+  </div>
+</div>
+<!-- Container -->
+<div class="w3-container" style="position:relative">
+  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
+  style="position:absolute;top:-28px;right:24px">+</a>
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+
+
 </body>
 </html>
-<?php
-if ( isset( $_POST['signUpbtn'] ) ) {
- $_SESSION['signUpbtn'] = $_POST['signUpbtn'];
-}
-?>
-<?php
-  if ( isset( $_POST['login'] ) ) { 
-
-
-
-    $email = $_POST["email"];
-    $loginPassword = $_POST["psw"];
-
-    $sqlTargets = "SELECT email FROM users WHERE email = '$email' AND password = '$loginPassword' ";
-    $result = $conn->query($sqlTargets);
-    if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-          header("Location: signin.php");
-        }
-    } else {
-      echo "Invalid user or password";
-    }
-    $conn->close();
-    }
-  
-    session_start(); 
-    $_SESSION["email"] = "$email";
-    $_SESSION["psw"] = "$loginPassword";
-    echo $_SESSION["email"];
-    die()
-
-
-?>

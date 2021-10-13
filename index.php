@@ -24,12 +24,18 @@
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
+   
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Logo</a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
   <a href="store.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Store Page</a>
     <a href="signUp.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign Up</a>
     <a href="about.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
     <a href="contact.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <a href="forgot.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Forgot Password</a>
+    <a href="profile.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
+    <a href="galleryPage.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
+    <a href = "basket.php" style="font-size:24px" i class="fa fa-shopping-cart"></a>
+
 
 
     </div>
@@ -62,39 +68,39 @@
 </div>
 
 <div class="w3-quarter">
-<div class="w3-card w3-white" >
-  <img src="images/mini-backpack.jpg" alt="backpack"  class="backpack" style="width:100%">
-  <div class="w3-container">
-  <h3>Backpack</h3>
-  <h4>Contains:</h4>
-  <p>skincare products and the backpack itself is reusable.</p>
-  </div>
-  </div>
+<div class="card">
+  <img src="images/mini-backpack.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Backpack</h1>
+  <p class="price">R120</p>
+  <p>Backpack is reusable and contains skincare products.</p>
+  <p><button>Add to Cart</button></p>
+  
 </div>
-
-<div class="w3-quarter">
-<div class="w3-card w3-white">
-  <img src="images/disneyBeanies.jpg" alt="disney" style="width:100%">
-  <div class="w3-container">
-  <h3>Disney Beanies</h3>
-  <p>Disney themed beanies, to keep you warm during winter.</p>
   </div>
-  </div>
+  <div><div class="w3-quarter">
+<div class="card">
+  <img src="images/greyBeanie.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Grey Beanie</h1>
+  <p class="price">R80</p>
+  <p>A high quality grey beanie. Made from 100% Acylic.</p>
+  <p><button>Add to Cart</button></p>
 </div>
-
-<div class="w3-quarter">
-<div class="w3-card w3-white">
+  </div>
+  <div class="w3-quarter">
+<div class="card">
   <img src="images/sack.jpg" alt="sack" style="width:100%">
-  <div class="w3-container">
-  <h3>Sack</h3>
-  <h4>Sack containing skincare products./h4>
-  <p>A sack containing skincare products, the sack is also reusable. The sack is made out of string.</p>
+  <h1>Sack</h1>
+  <p class="price">R120</p>
+  <p>Contains skincare products, and the sack is reusable.</p>
+  <p><button>Add to Cart</button></p>
+</div>
   </div>
   </div>
 </div>
-
+  </div>
+</div></div>
+  </div>
 </div>
-
 <!-- Container -->
 <div class="w3-container" style="position:relative">
   <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"

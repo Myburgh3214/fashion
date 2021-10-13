@@ -1,6 +1,3 @@
-<?php
-  include ("connect.php");
-?>
 <!DOCTYPE html>
 <html>
 <title>Online Store</title>
@@ -27,21 +24,18 @@
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
+
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="index.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
   <a href="store.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Store Page</a>
     <a href="signUp.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign Up</a>
     <a href="about.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
     <a href="contact.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
-    <a href="profile.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
+    <a href="forgot.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Forgot Password</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
     <a href="gallleryPage.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
     <a href = "basket.php" style="font-size:24px" i class="fa fa-shopping-cart"></a>
 
-
-
-
-
-  </form>
     </div>
   </div>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
@@ -57,36 +51,60 @@
   </div>
 </div>
 
-<!-- Registration Form -->
+<!-- Team Container -->
 <div class="w3-container w3-padding-64 w3-center" id="team">
    <img src="images/koekieblom.jpg">
-   <h1>Registration Form: </h1>
-  <form action="signUp.php" method="POST">
-    <div>
-    <label><h2>Email:</h2></label>
-    <input type="text" name="email">
-    </div>
-    
-    <div>
-    <label><h2>Password:</h2></label>
-    <input type="text" name="passWord">
-    </div>
-
-    <div>
-    <br>
-    <button type="submit" name="submitBtn">Confirm</button>
-    </div>
-</form>
-</div>
-</div>
+  
 </div>
 
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div class="w3-quarter">
+  <h2>Our Work</h2>
+  <p>We make handmade crochet products, making sure we put as much care into our products as we possibly can.</p>
+</div>
+
+<div class="w3-quarter">
+<div class="card">
+  <img src="images/mini-backpack.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Backpack</h1>
+  <p class="price">R120</p>
+  <p>Backpack is reusable and contains skincare products.</p>
+  <p><button>Add to Cart</button></p>
+  
+</div>
+  </div>
+  <div><div class="w3-quarter">
+<div class="card">
+  <img src="images/greyBeanie.jpg" alt="Denim Jeans" style="width:100%">
+  <h1>Grey Beanie</h1>
+  <p class="price">R80</p>
+  <p>A high quality grey beanie. Made from 100% Acylic.</p>
+  <p><button>Add to Cart</button></p>
+</div>
+  </div>
+  <div class="w3-quarter">
+<div class="card">
+  <img src="images/sack.jpg" alt="sack" style="width:100%">
+  <h1>Sack</h1>
+  <p class="price">R120</p>
+  <p>Contains skincare products, and the sack is reusable.</p>
+  <p><button>Add to Cart</button></p>
+</div>
+  </div>
+  </div>
+</div>
+  </div>
+</div></div>
+  </div>
+</div>
 <!-- Container -->
 <div class="w3-container" style="position:relative">
   <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
   style="position:absolute;top:-28px;right:24px">+</a>
 </div>
-
+<br>
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
@@ -104,21 +122,8 @@
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
 </footer>
+
+
+
 </body>
 </html>
-<?php
-  $email = $_POST["email"];
-  $passWord = $_POST["passWord"];
-
-   if (isset($_POST["submitBtn"])){
-    if($passWord == "koekieblom1234"){
-      $sql = "INSERT INTO users (email, password, role) VALUES ('$email', '$passWord', 'admin')";
-      $conn->query($sql); 
-    }
-    else{
-      $sql = "INSERT INTO users (email, password, role) VALUES ('$email', '$passWord', 'member')";
-      $conn->query($sql); 
-    }
-  }
-
-?>
