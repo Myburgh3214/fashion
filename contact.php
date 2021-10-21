@@ -35,8 +35,8 @@
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
     <a href="profile.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
     <a href="gallleryPage.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
-    <button style="font-size:24px">Shopping Cart<i class="fa fa-shopping-cart"></i></button>
-
+    <a href = "basket.php" style="font-size:24px" i class="fa fa-shopping-cart"></a>
+s
 
 
 

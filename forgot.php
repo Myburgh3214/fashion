@@ -12,7 +12,7 @@
   body,h1 {font-family: "Raleway", sans-serif}
   body, html {height: 100%}
   body {
-      background-image: url(images/libraryImage.jpg);
+      background-image: url(images/crochet.jpg);
   }
 </style>
 <!-- Navbar -->

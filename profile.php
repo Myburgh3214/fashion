@@ -1,3 +1,8 @@
+<?php
+
+  include ("connect.php");
+
+?>
 <!DOCTYPE html>
 <html>
 <title>Online Store</title>
@@ -127,3 +132,4 @@
 
 </body>
 </html>
+

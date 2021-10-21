@@ -37,10 +37,8 @@
     <a href="gallleryPage.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
     <a href = "basket.php" style="font-size:24px" i class="fa fa-shopping-cart"></a>
 
-
-
     </div>
-  </div>
+  </div>s
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
  </div>
 
@@ -93,7 +91,7 @@
   <h1>Sack</h1>
   <p class="price">R120</p>
   <p>Contains skincare products, and the sack is reusable.</p>
-  <p><button>Add to Cart</button></p>
+  <button class="add-to-cart" id='test'>ADD TO CART</button>
 </div>
   </div>
   </div>
@@ -101,6 +99,135 @@
   </div>
 </div></div>
   </div>
+</div>
+<div class = "basket">
+<div>
+        <h2>Shop With Ease</h2>
+        
+        <button id='cart-button' class="trigger cart-button-style">Show Cart</button>
+        
+        
+        <div id="shop">
+            
+            <div class="products ios apple" id="iphone-x">
+                <img class="product-image" src="http://via.placeholder.com/200x200">
+                <p class="product-name">iPhone X</p>
+                <p class="product-description">A 5.5" beast of processing power from Apple.</p>
+                <p class="product-price" value='999'>999</p>
+                <button class="add-to-cart" id='test'>ADD TO CART</button>
+            </div>
+            
+            <div class="products android samsung" id="samsung-s9">
+                <img class="product-image" src="http://via.placeholder.com/200x200">
+                <p class="product-name">Samsung S9</p>
+                <p class="product-description">The most powerful Android device on the planet.</p>
+                <p class="product-price" value='789'>789</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            
+            <div class="products android google" id="pixel-2">
+                <img class="product-image" src="http://via.placeholder.com/200x200">
+                <p class="product-name">Pixel 2</p>
+                <p class="product-description">The perfect phone for a clean Android experience</p>
+                <p class="product-price" value='876'>876</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            
+            <div class="products android oneplus" id="oneplus-6">
+                <img class="product-image" src="http://via.placeholder.com/200x200">
+                <p class="product-name">Oneplus 6</p>
+                <p class="product-description">The latest from a long line of affordable premium devices by Oneplus</p>
+                <p class="product-price" value='799'>799</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            
+            <div class="products ios apple" id="iphone-8">
+                <img class="product-image" src="http://via.placeholder.com/200x200">
+                <p class="product-name">iPhone 8</p>
+                <p class="product-description">The little, less-stylish brother of the iPhone X.</p>
+                <p class="product-price" value='719'>719</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            
+            <div class="products android huawei" id="huawei-p20">
+                <img class="product-image" src="http://via.placeholder.com/200x200">
+                <p class="product-name">Huawei P20</p>
+                <p class="product-description">A solid performer from the chinese giant Huawei.</p>
+                <p class="product-price" value='769'>769</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            
+            <div class="products android lg" id="lg-g7">
+                <img class="product-image" src="http://via.placeholder.com/200x200">
+                <p class="product-name">LG G7 ThinQ</p>
+                <p class="product-description">The latest and most powerful smartphone from LG.</p>
+                <p class="product-price" value='699'>699</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+            
+            <div class="products android huawei" id="huawei-mate-10-pro">
+                <img class="product-image" src="http://via.placeholder.com/200x200">
+                <p class="product-name">Huawei Mate 10 Pro</p>
+                <p class="product-description">The most powerful Android device yet from Huawei.</p>
+                <p class="product-price" value='899'>899</p>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+        </div>
+        
+    </div>
+        <div id='cart-wrapper' class="slider close">
+            <div id='cart'>
+                <div id="cart-products-wrapper">
+                    <table id="cart-table">
+                    <thead id="cart-table-header">
+                         <th class="name-col">Product Name</th> 
+                         <th class="quantity-col">Quantity</th>       
+                         <th class="price-col">Price</th>
+                         <th class="updated-price-col">Updated Price</th>
+                         <th class="update-col">Update</th>
+                         <th class="remove-col">Remove</th>
+                    </thead>
+                    <tbody id="cart-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id='amount-controls'>
+                <div id="cart-amount-wrapper">
+                    <table>
+                        <tbody>
+                            <tr id='subtotal-wrappper'>
+                                <td id="subtotal-label">Subtotal:</td>
+                                <td id="subtotal">0.00</td>
+                            </tr>
+
+                            <tr id='total-wrapper'>
+                                <td id="total-label">Total:</td>
+                                <td id="total">0.00</td>
+                            </tr>
+
+                            <tr id="promo-checkout">
+                                <td id="promo-wrapper">
+                                    <input id="promo" placeholder="Input Promo Code">
+                                    <button id="apply-promo">Apply Promo</button>
+                                </td>
+
+                                <td>
+                                    <button id="checkout">Checkout</button>
+                                </td>
+                                
+                                <td>
+                                    <button id="ks" class="keep-shopping">Keep Shopping</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
 </div>
 <!-- Container -->
 <div class="w3-container" style="position:relative">
@@ -130,3 +257,5 @@
 
 </body>
 </html>
+
+<script src="script/basket.js"></script>
