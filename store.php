@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <title>Online Store</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/stylesheet.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
 <body id="myPage">
 
 <!-- Sidebar on click -->
@@ -24,21 +27,20 @@
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
-   
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
 
-  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
-  <a href="store.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Store Page</a>
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+    <a href="store.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Store Page</a>
     <a href="signUp.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign Up</a>
     <a href="about.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
     <a href="contact.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
     <a href="forgot.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Forgot Password</a>
-    <a href="profile.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
-    <a href="gallleryPage.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
+    <a href="galleryPage.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
     <a href = "basket.php" style="font-size:24px" i class="fa fa-shopping-cart"></a>
 
     </div>
-  </div>s
+  </div>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
  </div>
 
@@ -58,121 +60,82 @@
   
 </div>
 
-<!-- Work Row -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
 
-<div class="w3-quarter">
-  <h2>Our Work</h2>
-  <p>We make handmade crochet products, making sure we put as much care into our products as we possibly can.</p>
-</div>
-
-<div class="w3-quarter">
-<div class="card">
-  <img src="images/mini-backpack.jpg" alt="Denim Jeans" style="width:100%">
-  <h1>Backpack</h1>
-  <p class="price">R120</p>
-  <p>Backpack is reusable and contains skincare products.</p>
-  <p><button>Add to Cart</button></p>
-  
-</div>
-  </div>
-  <div><div class="w3-quarter">
-<div class="card">
-  <img src="images/greyBeanie.jpg" alt="Denim Jeans" style="width:100%">
-  <h1>Grey Beanie</h1>
-  <p class="price">R80</p>
-  <p>A high quality grey beanie. Made from 100% Acylic.</p>
-  <p><button>Add to Cart</button></p>
-</div>
-  </div>
-  <div class="w3-quarter">
-<div class="card">
-  <img src="images/sack.jpg" alt="sack" style="width:100%">
-  <h1>Sack</h1>
-  <p class="price">R120</p>
-  <p>Contains skincare products, and the sack is reusable.</p>
-  <button class="add-to-cart" id='test'>ADD TO CART</button>
-</div>
-  </div>
-  </div>
-</div>
-  </div>
-</div></div>
-  </div>
-</div>
 <div class = "basket">
 <div>
+  <?php
+    class ExampleClass {
+
+    public $method = "<h2>Welcome";
+
+    public function TestMethod() {
+      
+        echo $this->method;
+  }
+
+}
+
+$welcome = new ExampleClass();
+
+// Adding a new property to the object
+$welcome->myName = " to our product page</h2>";
+
+$welcome->TestMethod(); // expected output: Test string
+
+echo $welcome->myName; //expected output: Nicholas
+?>
+<?php
+
+class messageClass {
+  function __construct() {
+    echo "<h2> Enjoy your stay and feel free to contact us if you want a special order of handmade crochet products.</h2>";
+  }
+}
+
+$newMessage = new messageClass();
+
+//expected output New object made!
+
+
+?>
+<script>
+  ///owners of this website
+function User(firstname, lastname, username, email) {
+  this._firstname = firstname;
+  this._lastname = lastname;
+  this._username = username;
+  this._email = email;
+}
+
+let user1 = new User("Jim", "Doe", "jimmyBoy", "jim@google.com");
+let user2 = new User("Tim", "Reece", "superTim", "tim@yahoo.com");
+
+
+
+
+</script>
+
+
         <h2>Shop With Ease</h2>
         
-        <button id='cart-button' class="trigger cart-button-style">Show Cart</button>
         
         
         <div id="shop">
             
-            <div class="products ios apple" id="iphone-x">
-                <img class="product-image" src="http://via.placeholder.com/200x200">
-                <p class="product-name">iPhone X</p>
-                <p class="product-description">A 5.5" beast of processing power from Apple.</p>
-                <p class="product-price" value='999'>999</p>
-                <button class="add-to-cart" id='test'>ADD TO CART</button>
+            <div class="greyBeanies">
+             
+            
+
+            <div class="Backpack" id="mini-backpack">
+                <p class="product-name">Mini-Backpack</p>
+                <p class="product-description">Mini-Backpack containing skincare products</p>
+                <p class="product-price" value='R120'>R120</p>
+                <button class="add-to-cart">ADD TO CART</button>
+
             </div>
             
-            <div class="products android samsung" id="samsung-s9">
-                <img class="product-image" src="http://via.placeholder.com/200x200">
-                <p class="product-name">Samsung S9</p>
-                <p class="product-description">The most powerful Android device on the planet.</p>
-                <p class="product-price" value='789'>789</p>
-                <button class="add-to-cart">ADD TO CART</button>
-            </div>
-            
-            <div class="products android google" id="pixel-2">
-                <img class="product-image" src="http://via.placeholder.com/200x200">
-                <p class="product-name">Pixel 2</p>
-                <p class="product-description">The perfect phone for a clean Android experience</p>
-                <p class="product-price" value='876'>876</p>
-                <button class="add-to-cart">ADD TO CART</button>
-            </div>
-            
-            <div class="products android oneplus" id="oneplus-6">
-                <img class="product-image" src="http://via.placeholder.com/200x200">
-                <p class="product-name">Oneplus 6</p>
-                <p class="product-description">The latest from a long line of affordable premium devices by Oneplus</p>
-                <p class="product-price" value='799'>799</p>
-                <button class="add-to-cart">ADD TO CART</button>
-            </div>
-            
-            <div class="products ios apple" id="iphone-8">
-                <img class="product-image" src="http://via.placeholder.com/200x200">
-                <p class="product-name">iPhone 8</p>
-                <p class="product-description">The little, less-stylish brother of the iPhone X.</p>
-                <p class="product-price" value='719'>719</p>
-                <button class="add-to-cart">ADD TO CART</button>
-            </div>
-            
-            <div class="products android huawei" id="huawei-p20">
-                <img class="product-image" src="http://via.placeholder.com/200x200">
-                <p class="product-name">Huawei P20</p>
-                <p class="product-description">A solid performer from the chinese giant Huawei.</p>
-                <p class="product-price" value='769'>769</p>
-                <button class="add-to-cart">ADD TO CART</button>
-            </div>
-            
-            <div class="products android lg" id="lg-g7">
-                <img class="product-image" src="http://via.placeholder.com/200x200">
-                <p class="product-name">LG G7 ThinQ</p>
-                <p class="product-description">The latest and most powerful smartphone from LG.</p>
-                <p class="product-price" value='699'>699</p>
-                <button class="add-to-cart">ADD TO CART</button>
-            </div>
-            
-            <div class="products android huawei" id="huawei-mate-10-pro">
-                <img class="product-image" src="http://via.placeholder.com/200x200">
-                <p class="product-name">Huawei Mate 10 Pro</p>
-                <p class="product-description">The most powerful Android device yet from Huawei.</p>
-                <p class="product-price" value='899'>899</p>
-                <button class="add-to-cart">ADD TO CART</button>
-            </div>
-        </div>
+
+           
         
     </div>
         <div id='cart-wrapper' class="slider close">
@@ -216,9 +179,7 @@
                                     <button id="checkout">Checkout</button>
                                 </td>
                                 
-                                <td>
-                                    <button id="ks" class="keep-shopping">Keep Shopping</button>
-                                </td>
+                                
                             </tr>
                         </tbody>
                     </table>
@@ -252,10 +213,28 @@
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
 </footer>
+<script>
+const dataImg = "https://jsonplaceholder.typicode.com/photos/1";
 
+ let test2 = fetch(dataImg, {
+    method: 'GET'});
+let test3 = test2.then(response => {
+  return response.json();
+}).then(data => {
+  createImage(data.thumbnailUrl)
+});
+function createImage(url){
+  let testImg = document.createElement('img');
+  testImg.src = url;
+  document.getElementById('mini-backpack').appendChild(testImg);
 
+}
+
+ 
+
+</script>
+<script src="script/basket.js"></script>
 
 </body>
 </html>
 
-<script src="script/basket.js"></script>

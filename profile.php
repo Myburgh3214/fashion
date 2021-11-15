@@ -1,17 +1,24 @@
 <?php
 
+session_start(); 
+  
+ $ses = $_SESSION['email'];
+
   include ("connect.php");
 
 ?>
 <!DOCTYPE html>
 <html>
 <title>Online Store</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/stylesheet.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
 <body id="myPage">
 
 <!-- Sidebar on click -->
@@ -30,15 +37,15 @@
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
 
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
-  <a href="store.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Store Page</a>
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+    <a href="store.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Store Page</a>
     <a href="signUp.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign Up</a>
     <a href="about.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
     <a href="contact.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
     <a href="forgot.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Forgot Password</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
-    <a href="gallleryPage.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
+    <a href="galleryPage.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
     <a href = "basket.php" style="font-size:24px" i class="fa fa-shopping-cart"></a>
 
     </div>
@@ -62,48 +69,14 @@
   
 </div>
 
-<!-- Work Row -->
-<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+<div class="welcomeMssg">
+<?php
 
-<div class="w3-quarter">
-  <h2>Our Work</h2>
-  <p>We make handmade crochet products, making sure we put as much care into our products as we possibly can.</p>
+  echo "WELCOME $ses";
+
+?>
 </div>
 
-<div class="w3-quarter">
-<div class="card">
-  <img src="images/mini-backpack.jpg" alt="Denim Jeans" style="width:100%">
-  <h1>Backpack</h1>
-  <p class="price">R120</p>
-  <p>Backpack is reusable and contains skincare products.</p>
-  <p><button>Add to Cart</button></p>
-  
-</div>
-  </div>
-  <div><div class="w3-quarter">
-<div class="card">
-  <img src="images/greyBeanie.jpg" alt="Denim Jeans" style="width:100%">
-  <h1>Grey Beanie</h1>
-  <p class="price">R80</p>
-  <p>A high quality grey beanie. Made from 100% Acylic.</p>
-  <p><button>Add to Cart</button></p>
-</div>
-  </div>
-  <div class="w3-quarter">
-<div class="card">
-  <img src="images/sack.jpg" alt="sack" style="width:100%">
-  <h1>Sack</h1>
-  <p class="price">R120</p>
-  <p>Contains skincare products, and the sack is reusable.</p>
-  <p><button>Add to Cart</button></p>
-</div>
-  </div>
-  </div>
-</div>
-  </div>
-</div></div>
-  </div>
-</div>
 <!-- Container -->
 <div class="w3-container" style="position:relative">
   <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
@@ -127,8 +100,6 @@
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
 </footer>
-
-
 
 </body>
 </html>
