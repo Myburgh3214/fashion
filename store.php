@@ -29,7 +29,8 @@
  <div class="w3-bar w3-theme-d2 w3-left-align">
 
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+    <a href="index.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+    <a href="logIn.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Login</a>
     <a href="store.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Store Page</a>
     <a href="signUp.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign Up</a>
     <a href="about.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
@@ -37,7 +38,6 @@
     <a href="forgot.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Forgot Password</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
     <a href="galleryPage.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
-    <a href = "basket.php" style="font-size:24px" i class="fa fa-shopping-cart"></a>
 
     </div>
   </div>
@@ -214,26 +214,12 @@ let user2 = new User("Tim", "Reece", "superTim", "tim@yahoo.com");
   </div>
 </footer>
 <script>
-const dataImg = "https://jsonplaceholder.typicode.com/photos/1";
-
- let test2 = fetch(dataImg, {
-    method: 'GET'});
-let test3 = test2.then(response => {
-  return response.json();
-}).then(data => {
-  createImage(data.thumbnailUrl)
-});
-function createImage(url){
-  let testImg = document.createElement('img');
-  testImg.src = url;
-  document.getElementById('mini-backpack').appendChild(testImg);
-
-}
 
  
 
 </script>
 <script src="script/basket.js"></script>
+<script src="script/storeApi.js"></script>
 
 </body>
 </html>

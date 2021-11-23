@@ -1,71 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial;
-}
-
-/* The grid: Four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-  padding: 10px;
-}
-
-/* Style the images inside the grid */
-.column img {
-  opacity: 0.8; 
-  cursor: pointer; 
-}
-
-.column img:hover {
-  opacity: 1;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* The expanding image container */
-.container {
-  position: relative;
-  display: none;
-}
-
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  color: white;
-  font-size: 20px;
-}
-
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
-
-</style>
-</head>
-<!DOCTYPE html>
-<html>
 <title>Online Store</title>
 <head>
   <meta charset="UTF-8">
@@ -96,7 +30,6 @@ body {
 
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
-    <a href="logIn.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Login</a>
     <a href="store.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Store Page</a>
     <a href="signUp.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign Up</a>
     <a href="about.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
@@ -124,44 +57,67 @@ body {
 <!-- Team Container -->
 <div class="w3-container w3-padding-64 w3-center" id="team">
    <img src="images/koekieblom.jpg">
+  <h2>OUR TEAM</h2>
+  <p>Meet the team - our office rats:</p>
+
+
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div class="w3-quarter">
+  <h2>Our Work</h2>
+  <p>We make handmade crochet products, making sure we put as much care into our products as we possibly can.</p>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="images/selfie.jpg" alt="Snow" style="width:100%">
+  <div class="w3-container">
+  <h3>Owner of Koekieblom:</h3>
+  <h4>Manager</h4>
+  <p>Always working hard to make sure that your products are top quality and are delivered.</p>
+  
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
   
 </div>
-
-
-<!-- Container -->
-<div class="w3-container" style="position:relative">
-  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
-  style="position:absolute;top:-28px;right:24px">+</a>
-</div>
-<br>
-
-<div style="text-align:center">
-  <h2>Tabbed Image Gallery</h2>
-  <p>Click on the images below:</p>
 </div>
 
-<!-- The four columns -->
-<div class="row">
-  <div class="column">
-    <img src="images/greyBeanie.jpg" alt="grey beanie" style="width:100%" onclick="myFunction(this);">
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  
   </div>
-  <div class="column">
-    <img src="images/mini-backpack.jpg" alt="mini-backpack" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/sack.jpg" alt="sack" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/WhatsApp Image 2021-08-31 at 14.07.27.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
   </div>
 </div>
 
-<div class="container">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg" style="width:50%">
-  <div id="imgtext"></div>
 </div>
 
+
+
+    
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+      <h3>Address</h3>
+      <p>Swing by for a cup of coffee, or whatever.</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Vredendal, ZA</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +27 72 388 4920</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i> carinamyburgh@gmail.com</p>
+    </div>
+    <div class="w3-col m7">
+      
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
+
+<!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
   <h4>Follow Us</h4>
   <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
@@ -177,7 +133,6 @@ body {
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
 </footer>
-  
-<script src = "script/script.js"></script>
 
-
+</body>
+</html>

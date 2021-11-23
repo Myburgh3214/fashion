@@ -1,71 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial;
-}
-
-/* The grid: Four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-  padding: 10px;
-}
-
-/* Style the images inside the grid */
-.column img {
-  opacity: 0.8; 
-  cursor: pointer; 
-}
-
-.column img:hover {
-  opacity: 1;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* The expanding image container */
-.container {
-  position: relative;
-  display: none;
-}
-
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  color: white;
-  font-size: 20px;
-}
-
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
-
-</style>
-</head>
-<!DOCTYPE html>
-<html>
 <title>Online Store</title>
 <head>
   <meta charset="UTF-8">
@@ -96,7 +30,6 @@ body {
 
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
-    <a href="logIn.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Login</a>
     <a href="store.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Store Page</a>
     <a href="signUp.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign Up</a>
     <a href="about.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
@@ -128,6 +61,135 @@ body {
 </div>
 
 
+<div class = "basket">
+<div>
+  <?php
+    class ExampleClass {
+
+    public $method = "<h2>Welcome";
+
+    public function TestMethod() {
+      
+        echo $this->method;
+  }
+
+}
+
+$welcome = new ExampleClass();
+
+// Adding a new property to the object
+$welcome->myName = " to our product page</h2>";
+
+$welcome->TestMethod(); // expected output: Test string
+
+echo $welcome->myName; //expected output: Nicholas
+?>
+<?php
+
+class messageClass {
+  function __construct() {
+    echo "<h2> Enjoy your stay and feel free to contact us if you want a special order of handmade crochet products.</h2>";
+  }
+}
+
+$newMessage = new messageClass();
+
+//expected output New object made!
+
+
+?>
+<script>
+  ///owners of this website
+function User(firstname, lastname, username, email) {
+  this._firstname = firstname;
+  this._lastname = lastname;
+  this._username = username;
+  this._email = email;
+}
+
+let user1 = new User("Jim", "Doe", "jimmyBoy", "jim@google.com");
+let user2 = new User("Tim", "Reece", "superTim", "tim@yahoo.com");
+
+
+
+
+</script>
+
+
+        <h2>Shop With Ease</h2>
+        
+        
+        
+        <div id="shop">
+            
+            <div class="greyBeanies">
+             
+            
+
+            <div class="Backpack" id="mini-backpack">
+                <p class="product-name">Mini-Backpack</p>
+                <p class="product-description">Mini-Backpack containing skincare products</p>
+                <p class="product-price" value='R120'>R120</p>
+                <button class="add-to-cart">ADD TO CART</button>
+
+            </div>
+            
+
+           
+        
+    </div>
+        <div id='cart-wrapper' class="slider close">
+            <div id='cart'>
+                <div id="cart-products-wrapper">
+                    <table id="cart-table">
+                    <thead id="cart-table-header">
+                         <th class="name-col">Product Name</th> 
+                         <th class="quantity-col">Quantity</th>       
+                         <th class="price-col">Price</th>
+                         <th class="updated-price-col">Updated Price</th>
+                         <th class="update-col">Update</th>
+                         <th class="remove-col">Remove</th>
+                    </thead>
+                    <tbody id="cart-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id='amount-controls'>
+                <div id="cart-amount-wrapper">
+                    <table>
+                        <tbody>
+                            <tr id='subtotal-wrappper'>
+                                <td id="subtotal-label">Subtotal:</td>
+                                <td id="subtotal">0.00</td>
+                            </tr>
+
+                            <tr id='total-wrapper'>
+                                <td id="total-label">Total:</td>
+                                <td id="total">0.00</td>
+                            </tr>
+
+                            <tr id="promo-checkout">
+                                <td id="promo-wrapper">
+                                    <input id="promo" placeholder="Input Promo Code">
+                                    <button id="apply-promo">Apply Promo</button>
+                                </td>
+
+                                <td>
+                                    <button id="checkout">Checkout</button>
+                                </td>
+                                
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+</div>
 <!-- Container -->
 <div class="w3-container" style="position:relative">
   <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
@@ -135,33 +197,7 @@ body {
 </div>
 <br>
 
-<div style="text-align:center">
-  <h2>Tabbed Image Gallery</h2>
-  <p>Click on the images below:</p>
-</div>
-
-<!-- The four columns -->
-<div class="row">
-  <div class="column">
-    <img src="images/greyBeanie.jpg" alt="grey beanie" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/mini-backpack.jpg" alt="mini-backpack" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/sack.jpg" alt="sack" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/WhatsApp Image 2021-08-31 at 14.07.27.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
-  </div>
-</div>
-
-<div class="container">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg" style="width:50%">
-  <div id="imgtext"></div>
-</div>
-
+<!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
   <h4>Follow Us</h4>
   <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
@@ -177,7 +213,28 @@ body {
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
 </footer>
-  
-<script src = "script/script.js"></script>
+<script>
+const dataImg = "https://jsonplaceholder.typicode.com/photos/1";
 
+ let test2 = fetch(dataImg, {
+    method: 'GET'});
+let test3 = test2.then(response => {
+  return response.json();
+}).then(data => {
+  createImage(data.thumbnailUrl)
+});
+function createImage(url){
+  let testImg = document.createElement('img');
+  testImg.src = url;
+  document.getElementById('mini-backpack').appendChild(testImg);
+
+}
+
+ 
+
+</script>
+<script src="script/basket.js"></script>
+
+</body>
+</html>
 

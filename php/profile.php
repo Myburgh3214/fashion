@@ -1,69 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
 
-<style>
-* {
-  box-sizing: border-box;
-}
+session_start(); 
+  
+ $ses = $_SESSION['email'];
 
-body {
-  margin: 0;
-  font-family: Arial;
-}
+  include ("connect.php");
 
-/* The grid: Four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-  padding: 10px;
-}
-
-/* Style the images inside the grid */
-.column img {
-  opacity: 0.8; 
-  cursor: pointer; 
-}
-
-.column img:hover {
-  opacity: 1;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* The expanding image container */
-.container {
-  position: relative;
-  display: none;
-}
-
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  color: white;
-  font-size: 20px;
-}
-
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
-
-</style>
-</head>
+?>
 <!DOCTYPE html>
 <html>
 <title>Online Store</title>
@@ -96,7 +39,6 @@ body {
 
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
-    <a href="logIn.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Login</a>
     <a href="store.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Store Page</a>
     <a href="signUp.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign Up</a>
     <a href="about.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
@@ -127,6 +69,13 @@ body {
   
 </div>
 
+<div class="welcomeMssg">
+<?php
+
+  echo "WELCOME $ses";
+
+?>
+</div>
 
 <!-- Container -->
 <div class="w3-container" style="position:relative">
@@ -135,33 +84,7 @@ body {
 </div>
 <br>
 
-<div style="text-align:center">
-  <h2>Tabbed Image Gallery</h2>
-  <p>Click on the images below:</p>
-</div>
-
-<!-- The four columns -->
-<div class="row">
-  <div class="column">
-    <img src="images/greyBeanie.jpg" alt="grey beanie" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/mini-backpack.jpg" alt="mini-backpack" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/sack.jpg" alt="sack" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/WhatsApp Image 2021-08-31 at 14.07.27.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
-  </div>
-</div>
-
-<div class="container">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg" style="width:50%">
-  <div id="imgtext"></div>
-</div>
-
+<!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
   <h4>Follow Us</h4>
   <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
@@ -177,7 +100,7 @@ body {
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
 </footer>
-  
-<script src = "script/script.js"></script>
 
+</body>
+</html>
 

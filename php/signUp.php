@@ -36,7 +36,6 @@
 
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
   <a href="index.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
-  <a href="logIn.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Login</a>
   <a href="signUp.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign Up</a>
   <a href="galleryPage.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
 
@@ -99,5 +98,22 @@
   }
 
 ?>
-<script src="script/signUp.js"></script>
+<script>
 
+const data = {'title': 'go study', 'completed': 'false'};
+  fetch('https://jsonplaceholder.typicode.com/todos/1', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+.then(response => response.json())//translating the returned object to json
+.then(data => {
+  console.log('Success:', data);//logging a success message on success
+})
+.catch((error) => {
+  console.error('Error:', error);//logging a success message in a promise catch
+});
+    
+;</script>

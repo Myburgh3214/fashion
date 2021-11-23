@@ -1,69 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial;
-}
-
-/* The grid: Four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-  padding: 10px;
-}
-
-/* Style the images inside the grid */
-.column img {
-  opacity: 0.8; 
-  cursor: pointer; 
-}
-
-.column img:hover {
-  opacity: 1;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* The expanding image container */
-.container {
-  position: relative;
-  display: none;
-}
-
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  color: white;
-  font-size: 20px;
-}
-
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
-
-</style>
-</head>
+<?php
+  include ("connect.php");
+?>
 <!DOCTYPE html>
 <html>
 <title>Online Store</title>
@@ -83,6 +20,7 @@ body {
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
     <i class="fa fa-remove"></i>
   </a>
+
   <a href="#" class="w3-bar-item w3-button">Link 1</a>
   <a href="#" class="w3-bar-item w3-button">Link 2</a>
   <a href="#" class="w3-bar-item w3-button">Link 3</a>
@@ -95,17 +33,16 @@ body {
  <div class="w3-bar w3-theme-d2 w3-left-align">
 
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
-    <a href="logIn.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Login</a>
+    <a href="index.php" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
     <a href="store.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Store Page</a>
     <a href="signUp.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Sign Up</a>
     <a href="about.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
-    <a href="contact.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
-    <a href="forgot.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Forgot Password</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <a href="profile.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
     <a href="galleryPage.php" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
     <a href = "basket.php" style="font-size:24px" i class="fa fa-shopping-cart"></a>
 
+  </form>
     </div>
   </div>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
@@ -113,55 +50,50 @@ body {
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+
     <a href="#team" class="w3-bar-item w3-button">Team</a>
     <a href="#work" class="w3-bar-item w3-button">Work</a>
     <a href="#pricing" class="w3-bar-item w3-button">Price</a>
     <a href="#contact" class="w3-bar-item w3-button">Contact</a>
     <a href="#" class="w3-bar-item w3-button">Search</a>
+    
   </div>
 </div>
 
-<!-- Team Container -->
+<!-- Registration Form -->
 <div class="w3-container w3-padding-64 w3-center" id="team">
    <img src="images/koekieblom.jpg">
-  
+   <h1>Registration Form: </h1>
+  <form action="#" method="POST">
+    <div>
+    <label><h2>Email:</h2></label>
+    <input type="text" name="name">
+    </div>
+    
+    <div>
+    <label><h2>Password:</h2></label>
+    <input type="text" name="email">
+    </div>
+    <div>
+    <label><h2>message:</h2></label>
+    <input type="text" name="message">
+    </div>
+    <div>
+    <br>
+    <button type="submit" name="submitBtn">Confirm</button>
+    </div>
+</form>
 </div>
-
+</div>
+</div>
 
 <!-- Container -->
 <div class="w3-container" style="position:relative">
-  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
-  style="position:absolute;top:-28px;right:24px">+</a>
-</div>
-<br>
-
-<div style="text-align:center">
-  <h2>Tabbed Image Gallery</h2>
-  <p>Click on the images below:</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.144331123383!2d18.625727815157376!3d-31.793816181280032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c33d0a295b659c5%3A0xaab776170b0bce89!2sKlawer%20Wine%20Cellars%20(Pty)%20Ltd!5e0!3m2!1sen!2sza!4v1632388604629!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 </div>
 
-<!-- The four columns -->
-<div class="row">
-  <div class="column">
-    <img src="images/greyBeanie.jpg" alt="grey beanie" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/mini-backpack.jpg" alt="mini-backpack" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/sack.jpg" alt="sack" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/WhatsApp Image 2021-08-31 at 14.07.27.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
-  </div>
-</div>
 
-<div class="container">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg" style="width:50%">
-  <div id="imgtext"></div>
-</div>
-
+<!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
   <h4>Follow Us</h4>
   <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
@@ -176,8 +108,20 @@ body {
     <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
     <i class="fa fa-chevron-circle-up"></i></span></a>
   </div>
-</footer>
   
-<script src = "script/script.js"></script>
+</footer>
 
+</body>
+</html>
+<?php
+  $name = $_POST["name"];
+  $email = $_POST["email"];
+  $message = $_POST["message"];
 
+   if (isset($_POST["submitBtn"])){
+      $sql = "INSERT INTO contact_form (name, email, message) VALUES ('$name', '$email', '$message')";
+      $conn->query($sql); 
+    
+  }
+
+?>
