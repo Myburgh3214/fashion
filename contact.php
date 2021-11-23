@@ -1,6 +1,9 @@
 <?php
   include ("connect.php");
 ?>
+<?php
+  include ("php/contactPhp.php");
+?>
 <!DOCTYPE html>
 <html>
 <title>Online Store</title>
@@ -112,15 +115,3 @@
 
 </body>
 </html>
-<?php
-  $name = $_POST["name"];
-  $email = $_POST["email"];
-  $message = $_POST["message"];
-
-   if (isset($_POST["submitBtn"])){
-      $sql = "INSERT INTO contact_form (name, email, message) VALUES ('$name', '$email', '$message')";
-      $conn->query($sql); 
-    
-  }
-
-?>

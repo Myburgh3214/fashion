@@ -1,6 +1,13 @@
+
 <?php
   include ("connect.php")
   ?>
+  <?php
+
+include ("php/forgotPhp.php")
+
+
+?>
 <head>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
@@ -56,19 +63,4 @@
     </div>
 </form>
 
- <?php   
-
-  $confirm = $_POST["confirm"];
-  $emailRst = $_POST["reset"];
-  
-  $update = "UPDATE users
-  SET password = '$confirm'
-  WHERE email = '$emailRst'";
-
-  
-
-
-$conn->query($update); 
-
-
-?>
+ 
